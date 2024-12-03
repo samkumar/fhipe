@@ -21,6 +21,7 @@ RUN wget https://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz
 RUN tar xvvf pbc-0.5.14.tar.gz
 WORKDIR pbc-0.5.14/
 RUN ./configure && make install && make
+RUN ldconfig
 WORKDIR /
 
 RUN git clone --recursive https://github.com/kevinlewi/fhipe
